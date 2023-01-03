@@ -1,0 +1,9 @@
+rootProject.name = 'lib2'
+
+dependencyResolutionManagement {
+    versionCatalogs {
+        libs {
+            from(files("../../gradle/libs.versions.toml"))
+        }
+    }
+}

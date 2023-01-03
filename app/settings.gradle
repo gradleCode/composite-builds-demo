@@ -1,0 +1,12 @@
+rootProject.name = 'app'
+
+includeBuild '../../services/service1'
+includeBuild '../../services/service2'
+
+dependencyResolutionManagement {
+    versionCatalogs {
+        libs {
+            from(files("../gradle/libs.versions.toml"))
+        }
+    }
+}

@@ -1,0 +1,14 @@
+apply from: file('gradle/project.gradle')
+
+//all project clean build tasks
+task cleanBuild(type: Exec) {
+    rootProject.ext.projectDirs.each {
+        file(it).eachDir { dir ->
+            if (System.getProperty("os.name").toLowerCase(Locale.ROOT).contains("windows")) {
+                commandLine 'cmd', '/c', "./gradlew :${dir.name}:clean :${dir.name}:build"
+            } else {
+                commandLine 'sh', '-c', "./gradlew :${dir.name}:clean :${dir.name}:build"
+            }
+        }
+    }
+}

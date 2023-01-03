@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="SCRIPT">
+            <builds>
+              <build path="$PROJECT_DIR$/shared/lib2" name="lib2">
+                <projects>
+                  <project path="$PROJECT_DIR$/shared/lib2" />
+                </projects>
+              </build>
+              <build path="$PROJECT_DIR$/shared/lib1" name="lib1">
+                <projects>
+                  <project path="$PROJECT_DIR$/shared/lib1" />
+                </projects>
+              </build>
+              <build path="$PROJECT_DIR$/services/service2" name="service2">
+                <projects>
+                  <project path="$PROJECT_DIR$/services/service2" />
+                </projects>
+              </build>
+              <build path="$PROJECT_DIR$/services/service1" name="service1">
+                <projects>
+                  <project path="$PROJECT_DIR$/services/service1" />
+                </projects>
+              </build>
+            </builds>
+          </compositeBuild>
+        </compositeConfiguration>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/services/service1" />
+            <option value="$PROJECT_DIR$/services/service2" />
+            <option value="$PROJECT_DIR$/shared/lib1" />
+            <option value="$PROJECT_DIR$/shared/lib2" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,10 @@
+rootProject.name = 'composite-builds-demo'
+include 'app'
+
+apply from: file('gradle/project.gradle')
+
+ext.projectDirs.each {
+    file(it).eachDir { dir ->
+        includeBuild dir
+    }
+}

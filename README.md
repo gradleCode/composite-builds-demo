@@ -1,27 +1,40 @@
+# Gradle组合构建
+
 # 项目结构
 
 ```shell
 ├── services
 │   ├── service1
+│   │   ├── ...
 │   │   ├── build.gradle
-│   │   └── settings.gradle
+│   │   ├── settings.gradle
 │   └── service2
+│       ├── ...
 │       ├── build.gradle
-│       └── settings.gradle
-├── settings.gradle
-└── shared
-    ├── lib1
-    │   ├── build.gradle
-    │   └── settings.gradle
-    └── lib2
-        ├── build.gradle
-        └── settings.gradle
+│       ├── settings.gradle
+├── shared
+│    ├── lib1
+│    │   ├── ...
+│    │   ├── build.gradle
+│    │   ├── settings.gradle
+│    └── lib2
+│        ├── ...
+│        ├── build.gradle
+│        ├── settings.gradle
+├── build.gradle
+├── gradle
+│   ├── libs.versions.toml
+│   ├── dependency.gradle
+│   └── wrapper
+├── gradlew
+├── gradlew.bat
+└── settings.gradle
 ```
 
 # 执行测试
 
 ```shell
-./gradlew :lib1:clean :lib2:clean :service1:clean :service1:build --console=verbose
+./gradlew :service1:build --console=verbose
 ```
 
 ```shell

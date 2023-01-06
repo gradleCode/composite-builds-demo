@@ -1,0 +1,8 @@
+//集中存储库声明
+dependencyResolutionManagement {
+    versionCatalogs {
+        libs {
+            from(files("libs.versions.toml"))
+        }
+    }
+}

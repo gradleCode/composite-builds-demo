@@ -1,9 +1,6 @@
-rootProject.name = 'lib2'
-
-dependencyResolutionManagement {
-    versionCatalogs {
-        libs {
-            from(files("../../gradle/libs.versions.toml"))
-        }
-    }
+def dependencyFile = file("../../gradle/dependency.gradle")
+if(dependencyFile.exists()){
+    apply from: dependencyFile
 }
+
+rootProject.name = 'lib2'

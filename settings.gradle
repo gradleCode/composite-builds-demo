@@ -1,10 +1,11 @@
 rootProject.name = 'composite-builds-demo'
-include 'app'
 
-apply from: file('gradle/project.gradle')
+//标记引入的项目
+def projectDirs = [
+    'shared',
+    'services'
+]
 
-ext.projectDirs.each {
-    file(it).eachDir { dir ->
-        includeBuild dir
-    }
+projectDirs.each {
+    file(it).eachDir { dir -> includeBuild dir}
 }

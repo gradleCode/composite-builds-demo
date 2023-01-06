@@ -1,7 +1,0 @@
-//标记引入的项目
-ext {
-    projectDirs = [
-            'shared',
-            'services'
-    ]
-}

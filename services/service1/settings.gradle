@@ -1,12 +1,6 @@
-rootProject.name = 'service1'
-
-includeBuild '../../shared/lib1'
-includeBuild '../../shared/lib2'
-
-dependencyResolutionManagement {
-    versionCatalogs {
-        libs {
-            from(files("../../gradle/libs.versions.toml"))
-        }
-    }
+def dependencyFile = file("../../gradle/dependency.gradle")
+if(dependencyFile.exists()){
+    apply from: dependencyFile
 }
+
+rootProject.name = 'service1'
